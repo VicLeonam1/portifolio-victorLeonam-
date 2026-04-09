@@ -59,6 +59,10 @@
   100% { transform: translateY(0px); }
 }
 
+body, html{
+  scroll-behavior: smooth;
+}
+
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
@@ -141,23 +145,18 @@
 }
 
 .spinner {
-  width: 80px;
-  height: 80px;
+  width: 150px;
+  height: 150px;
   position: relative;
-}
-
-.spinner-inner-1 {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border-top: 2px solid var(--color-primary);
-  border-right: 2px solid transparent;
-  animation: spin 2s linear infinite;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .spinner-inner-2 {
   position: absolute;
-  inset: 8px;
+  inset: 18px;
   border-radius: 50%;
   border-bottom: 2px solid rgba(255,255,255,0.5);
   border-left: 2px solid transparent;
