@@ -5,6 +5,7 @@ import { initCursor } from './cursor.js';
 import { initFAQ } from './faq.js';
 import "../style.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { initModal } from './modalServices.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   
@@ -34,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjects();
   initCursor();
   initFAQ();
-  
+  initModal();
+
   if (window.lucide) {
     window.lucide.createIcons();
   }

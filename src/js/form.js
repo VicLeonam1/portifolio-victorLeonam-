@@ -6,8 +6,7 @@ export function initForm() {
 
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  form.addEventListener('submit', () => {
     
     // Submitting state
     submitBtn.disabled = true;

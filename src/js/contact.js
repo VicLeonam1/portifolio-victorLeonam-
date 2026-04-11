@@ -1,4 +1,4 @@
-import { initMenu } from './menu.js';
+
 import { initCursor } from './cursor.js';
 import { initForm } from './form.js';
 
@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (loader) loader.classList.add('hidden');
   }, 1000);
 
-  initMenu();
   initCursor();
   initForm();
 

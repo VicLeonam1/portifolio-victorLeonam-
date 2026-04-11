@@ -1,10 +1,11 @@
-colocar novas opções do formulario de tipo de projeto
-
-colocar depoinmento professor
-
-fazer formulario funcionar
-
 colocar projetos
 
-mudar faqs
+mudar contato em cada link
 
+mudar numero no modal
+
+colocar depoinmento do professor
+
+tirar o form submit
+
+fazer o formulario funcionar
