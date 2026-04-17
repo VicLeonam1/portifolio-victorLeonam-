@@ -11,7 +11,7 @@ export function initModal() {
 
   if (!modal) return; // evita erro se não existir na página
 
-  const phone = "5591999999999";
+  const phone = "5591992179973";
 
   const servicesData = {
   landing: {

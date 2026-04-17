@@ -1,11 +1,1 @@
 colocar projetos
-
-mudar contato em cada link
-
-mudar numero no modal
-
-colocar depoinmento do professor
-
-tirar o form submit
-
-fazer o formulario funcionar

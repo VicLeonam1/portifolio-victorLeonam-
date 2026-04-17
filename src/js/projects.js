@@ -1,11 +1,81 @@
-const ALL_PROJECTS = [
-  { id: 1, name: "TechStart Landing Page", type: "Landing Page", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop", description: "Uma landing page de alta conversão desenvolvida para uma startup de tecnologia. Focada em velocidade de carregamento e otimização de SEO.", tech: ["HTML", "CSS", "JS", "GSAP"], github: "#", demo: "#" },
-  { id: 2, name: "Clinica Odonto", type: "Sites Institucionais", image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop", description: "Site institucional completo para uma clínica odontológica, com sistema de agendamento integrado e blog.", tech: ["HTML", "Tailwind", "JS"], github: "#", demo: "#" },
-  { id: 3, name: "Link na Bio - Influencer", type: "Outros", image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop", description: "Página de links otimizada para mobile, com carregamento instantâneo e design personalizado para influenciadores.", tech: ["HTML", "CSS"], github: "#", demo: "#" },
-  { id: 4, name: "App Dashboard", type: "UI/Front-end", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop", description: "Dashboard administrativo complexo com gráficos em tempo real, tabelas de dados e gerenciamento de usuários.", tech: ["JS", "Chart.js", "Tailwind"], github: "#", demo: "#" },
-  { id: 5, name: "E-commerce Moda", type: "Sites Institucionais", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop", description: "Loja virtual completa com carrinho de compras, integração de pagamentos e painel administrativo.", tech: ["HTML", "JS", "CSS"], github: "#", demo: "#" },
-  { id: 6, name: "Agência Criativa", type: "Landing Page", image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1936&auto=format&fit=crop", description: "Portfólio interativo para uma agência de design, com animações complexas e transições de página.", tech: ["HTML", "GSAP", "Tailwind"], github: "#", demo: "#" }
-];
+const ALL_PROJECTS =
+  [
+  {
+    id: 1,
+    name: "Mendonça & Associados",
+    type: "Landing Page",
+    image: "/src/assets/img/mendonça-advocacia.png",
+    description: "Uma landing page de alta conversão desenvolvida para uma empresa de advocacia. Focada em velocidade de carregamento e otimização de SEO.",
+    tech: ["HTML", "CSS", "JS", "GSAP", "Tailwind"],
+    github: "#",
+    demo: "https://mendoncaadvocacia.netlify.app/"
+  },
+
+  {
+    id: 2,
+    name: "L'ÉLÉGANCE",
+    type: "Sites Institucionais",
+    image: "/src/assets/img/l-elegance.png",
+    description: "Site institucional completo para um restaurante de alta gastronomia, com cardápio digital, reservas online e integração com redes sociais.",
+    tech: ["HTML", "Tailwind", "JS"],
+    github: "#",
+    demo: "https://lelegancerestaurente.netlify.app/"
+  },
+
+  {
+    id: 3,
+    name: "Link na Bio - Sarah Fitness",
+    type: "Outros",
+    image: "/src/assets/img/sarah-fitness.png",
+    description: "Página de links otimizada para mobile, com carregamento instantâneo e design personalizado para influenciadores.",
+    tech: ["HTML", "CSS"],
+    github: "#",
+    demo: "https://sarahfitness.netlify.app/"
+  },
+
+  {
+    id: 4,
+    name: "Nexus Agência digital",
+    type: "Landing Page",
+    image: "/src/assets/img/nexus-agencia-digital.png",
+    description: "Site desenvolvido para uma agência digital premium, criado para transmitir modernidade, autoridade e sofisticação. O projeto combina design estratégico, visual impactante e navegação fluida para apresentar serviços, fortalecer a marca e gerar novas oportunidades de negócio.",
+    tech: ["JS", "Chart.js", "Tailwind"],
+    github: "#",
+    demo: "https://nexusagenciadigital.netlify.app/"
+  },
+
+  {
+    id: 5,
+    name: "DevPro",
+    type: "Sites Institucionais",
+    image: "/src/assets/img/devpro.png",
+    description: "Loja virtual completa com carrinho de compras, integração de pagamentos e painel administrativo.",
+    tech: ["HTML", "JS", "CSS"],
+    github: "#",
+    demo: "#"
+  },
+
+  {
+    id: 6,
+    name: "Lumina Sorriso",
+    type: "Sites Institucionais",
+    image: "/src/assets/img/lumina-sorriso.png",
+    description: "Site desenvolvido para uma clínica odontológica premium, criado para transmitir confiança, profissionalismo e bem-estar. O projeto une design elegante, navegação intuitiva e comunicação estratégica para valorizar os serviços, destacar a tecnologia utilizada e proporcionar uma experiência acolhedora desde o primeiro contato.",
+    tech: ["HTML", "GSAP", "Tailwind"],
+    github: "#",
+    demo: "https://luminasorriso.netlify.app/"
+  },
+  {
+    id: 7,
+    name: "NovaSolar",
+    type: "Sites Institucionais",
+    image: "/src/assets/img/nova-solar.png",
+    description: "Site desenvolvido para uma empresa de energia solar, criado para transmitir inovação, economia e sustentabilidade. O projeto une design moderno, comunicação estratégica e navegação intuitiva para destacar os benefícios da energia solar, gerar confiança e converter visitantes em novos clientes.",
+    tech: ["HTML", "GSAP", "Tailwind"],
+    github: "#",
+    demo: "https://novasolar.netlify.app/"
+  }
+]
 
 const ITEMS_PER_PAGE = 3;
 let currentPage = 1;
@@ -41,43 +111,77 @@ function updateProjects() {
 
 function renderGrid(projects) {
   const grid = document.getElementById('projects-grid');
-  grid.innerHTML = '';
 
-  if (projects.length === 0) {
-    grid.innerHTML = `<div class="col-span-full text-center py-20 text-white/50"><i data-lucide="search" class="w-12 h-12 mx-auto mb-4 opacity-20"></i><p>Nenhum projeto encontrado.</p></div>`;
-    if (window.lucide) window.lucide.createIcons();
-    return;
-  }
+  // anima saída
+  grid.classList.add('opacity-0', 'translate-y-5');
 
-  projects.forEach(p => {
-    const div = document.createElement('div');
-    div.className = 'group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer project-card';
-    div.onclick = () => openModal(p);
-    div.innerHTML = `
-      <img src="${p.image}" alt="${p.name}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-      <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
-      <div class="absolute inset-0 p-6 flex flex-col justify-end">
-        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-          <span class="text-primary text-sm font-medium tracking-wider uppercase mb-2 block">${p.type}</span>
-          <h3 class="text-2xl font-display text-white mb-4">${p.name}</h3>
-          <div class="flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-            <span class="text-white/80 text-sm">Ver detalhes</span>
-            <div class="w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center box-glow">
-              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+  setTimeout(() => {
+    grid.innerHTML = '';
+
+    if (projects.length === 0) {
+      grid.innerHTML = `
+        <div class="col-span-full text-center py-20 text-white/50">
+          <i data-lucide="search" class="w-12 h-12 mx-auto mb-4 opacity-20"></i>
+          <p>Nenhum projeto encontrado.</p>
+        </div>
+      `;
+      if (window.lucide) window.lucide.createIcons();
+
+      grid.classList.remove('opacity-0', 'translate-y-5');
+      return;
+    }
+
+    projects.forEach((p, index) => {
+      const div = document.createElement('div');
+
+      div.className = `
+        group relative rounded-2xl overflow-hidden aspect-[4/3]
+        cursor-pointer project-card
+        opacity-0 translate-y-8 scale-95
+        transition-all duration-700
+      `;
+
+      div.onclick = () => openModal(p);
+
+      div.innerHTML = `
+        <img src="${p.image}" alt="${p.name}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+
+        <div class="absolute inset-0 p-6 flex flex-col justify-end">
+          <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+            <span class="text-primary text-sm font-medium tracking-wider uppercase mb-2 block">${p.type}</span>
+            <h3 class="text-2xl font-display text-white mb-4">${p.name}</h3>
+
+            <div class="flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+              <span class="text-white/80 text-sm">Ver detalhes</span>
+
+              <div class="w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center box-glow">
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="absolute inset-0 border-2 border-transparent group-hover:border-primary/50 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
-    `;
-    grid.appendChild(div);
-  });
-  if (window.lucide) window.lucide.createIcons();
+
+        <div class="absolute inset-0 border-2 border-transparent group-hover:border-primary/50 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
+      `;
+
+      grid.appendChild(div);
+
+      // entrada individual
+      setTimeout(() => {
+        div.classList.remove('opacity-0', 'translate-y-8', 'scale-95');
+      }, index * 120);
+    });
+
+    if (window.lucide) window.lucide.createIcons();
+
+    grid.classList.remove('opacity-0', 'translate-y-5');
+  }, 250);
 }
 
 function renderFilters() {
   const filtersContainer = document.getElementById('project-filters');
-  const filters = ["Todos", "Landing Pages", "Sites Institucionais", "UI/Front-end", "Outros"];
+  const filters = ["Todos", "Landing Page", "Sites Institucionais", "UI/Front-end", "Outros"];
   
   filtersContainer.innerHTML = '';
   filters.forEach(f => {
