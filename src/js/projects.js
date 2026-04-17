@@ -1,10 +1,17 @@
-const ALL_PROJECTS =
-  [
+import mendoncaImg from "../assets/img/mendonça-advocacia.png";
+import eleganceImg from "../assets/img/l-elegance.png";
+import sarahImg from "../assets/img/sarah-fitness.png";
+import nexusImg from "../assets/img/nexus-agencia-digital.png";
+import devproImg from "../assets/img/devpro.png";
+import luminaImg from "../assets/img/lumina-sorriso.png";
+import treinadorImg from "../assets/img/treinador-pro.png";
+
+const ALL_PROJECTS = [
   {
     id: 1,
     name: "Mendonça & Associados",
     type: "Landing Page",
-    image: "/src/assets/img/mendonça-advocacia.png",
+    image: mendoncaImg,
     description: "Uma landing page de alta conversão desenvolvida para uma empresa de advocacia. Focada em velocidade de carregamento e otimização de SEO.",
     tech: ["HTML", "CSS", "JS", "GSAP", "Tailwind"],
     github: "#",
@@ -15,7 +22,7 @@ const ALL_PROJECTS =
     id: 2,
     name: "L'ÉLÉGANCE",
     type: "Sites Institucionais",
-    image: "/src/assets/img/l-elegance.png",
+    image: eleganceImg,
     description: "Site institucional completo para um restaurante de alta gastronomia, com cardápio digital, reservas online e integração com redes sociais.",
     tech: ["HTML", "Tailwind", "JS"],
     github: "#",
@@ -26,7 +33,7 @@ const ALL_PROJECTS =
     id: 3,
     name: "Link na Bio - Sarah Fitness",
     type: "Outros",
-    image: "/src/assets/img/sarah-fitness.png",
+    image: sarahImg,
     description: "Página de links otimizada para mobile, com carregamento instantâneo e design personalizado para influenciadores.",
     tech: ["HTML", "CSS"],
     github: "#",
@@ -37,7 +44,7 @@ const ALL_PROJECTS =
     id: 4,
     name: "Nexus Agência digital",
     type: "Landing Page",
-    image: "/src/assets/img/nexus-agencia-digital.png",
+    image: nexusImg,
     description: "Site desenvolvido para uma agência digital premium, criado para transmitir modernidade, autoridade e sofisticação. O projeto combina design estratégico, visual impactante e navegação fluida para apresentar serviços, fortalecer a marca e gerar novas oportunidades de negócio.",
     tech: ["JS", "Chart.js", "Tailwind"],
     github: "#",
@@ -48,7 +55,7 @@ const ALL_PROJECTS =
     id: 5,
     name: "DevPro",
     type: "Sites Institucionais",
-    image: "/src/assets/img/devpro.png",
+    image: devproImg,
     description: "Loja virtual completa com carrinho de compras, integração de pagamentos e painel administrativo.",
     tech: ["HTML", "JS", "CSS"],
     github: "#",
@@ -59,23 +66,24 @@ const ALL_PROJECTS =
     id: 6,
     name: "Lumina Sorriso",
     type: "Sites Institucionais",
-    image: "/src/assets/img/lumina-sorriso.png",
+    image: luminaImg,
     description: "Site desenvolvido para uma clínica odontológica premium, criado para transmitir confiança, profissionalismo e bem-estar. O projeto une design elegante, navegação intuitiva e comunicação estratégica para valorizar os serviços, destacar a tecnologia utilizada e proporcionar uma experiência acolhedora desde o primeiro contato.",
     tech: ["HTML", "GSAP", "Tailwind"],
     github: "#",
     demo: "https://luminasorriso.netlify.app/"
   },
+
   {
-    id: 7,
-    name: "NovaSolar",
+    id: 8,
+    name: "Treinador.PRO",
     type: "Sites Institucionais",
-    image: "/src/assets/img/nova-solar.png",
-    description: "Site desenvolvido para uma empresa de energia solar, criado para transmitir inovação, economia e sustentabilidade. O projeto une design moderno, comunicação estratégica e navegação intuitiva para destacar os benefícios da energia solar, gerar confiança e converter visitantes em novos clientes.",
+    image: treinadorImg,
+    description: "Site desenvolvido para um personal trainer premium, criado para transmitir autoridade, profissionalismo e resultados. O projeto combina design moderno, navegação fluida e comunicação estratégica para destacar os serviços, valorizar os diferenciais e proporcionar uma experiência motivadora desde o primeiro contato.",
     tech: ["HTML", "GSAP", "Tailwind"],
     github: "#",
-    demo: "https://novasolar.netlify.app/"
+    demo: "https://treinadorpro.netlify.app/"
   }
-]
+];
 
 const ITEMS_PER_PAGE = 3;
 let currentPage = 1;
